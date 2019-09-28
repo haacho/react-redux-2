@@ -3,21 +3,17 @@
     margin-top: 5%;
 }
 
-
 .root {
-    padding: 2%;   
+    padding: 2%;
 }
 
 .card {
     min-width: 275px;
-    
 }
-
 
 .carta {
     padding: 1%;
 }
-
 
 .bullet {
     display: 'inline-block';
@@ -26,11 +22,28 @@
 }
 
 .title {
-    font-size: 14;    
+    font-size: 14;
 }
+
 .blanco {
-    color:white !important;
+    color: white !important;
 }
+
 .pos {
     margin-bottom: 12;
+}
+
+.section-titulares {
+    padding: 2%;
+    background: aquamarine;
+}
+
+.section-plantilla {
+    padding: 2%;
+    background: aliceblue;
+}
+
+.section-suplentes {
+    padding: 2%;
+    background: bisque;
 }

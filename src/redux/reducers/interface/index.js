@@ -16,7 +16,6 @@ const reducerInterface = handleActions({
         return { ...state, tema: action.payload };
     },
     [OBTENER_COLORES]: (state, action) => {
-        console.log("dedo");
         return { ...state, temas };
     }
 }, initialState);

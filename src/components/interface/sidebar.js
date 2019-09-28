@@ -56,7 +56,11 @@ const TemporaryDrawer = (props) => {
                     <ListItemIcon><SportsFootball /> </ListItemIcon>
                     <ListItemText primary={"Manager football"} />
                 </ListItem>
-
+                <Divider />
+                <ListItem button onClick={() => history.push('/posteos')}>
+                    <ListItemIcon><FormatListBulletedIcon /> </ListItemIcon>
+                    <ListItemText primary={"Posteos"} />
+                </ListItem>
                 <Divider />
             </List>
         </div>

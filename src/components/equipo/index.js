@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Jugadores from './Jugadores';
-import Titulares from './Titulares';
-import Suplentes from './Suplentes';
-import { UPDATE_TITULO } from '../../redux/actions/interface/';
+import Jugadores from './plantilla';
+import Titulares from './partido/titulares';
+import Suplentes from './partido/suplentes';
+import { UPDATE_TITULO } from '../../redux/actions/interface';
 
 class EquipoSeleccionado extends Component {
 

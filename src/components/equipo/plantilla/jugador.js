@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import logo from './boca.png';
 
 const useStyles = makeStyles({
     card: {
@@ -26,7 +25,7 @@ export default function Jugador({ jugador, bloquearInterface, add_titular, add_s
                     component="img"
                     alt="Contemplative Reptile"
                     height="140"
-                    image={logo}
+                    image={jugador.img}
                     title="Contemplative Reptile"
                 />
                 <CardContent>
@@ -34,7 +33,7 @@ export default function Jugador({ jugador, bloquearInterface, add_titular, add_s
                         {jugador.nombre}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        {jugador.nombre}
+                        {jugador.descripcion}
                     </Typography>
                 </CardContent>
             </CardActionArea>
