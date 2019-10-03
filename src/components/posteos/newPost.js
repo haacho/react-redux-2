@@ -4,23 +4,25 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import './style.css';
 
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 
 function myForm(props) {
 
-
-
     const {
+        coso,
         isSubmitting,
         isValid,
         handleChange,
         handleBlur,
-        values
+        values,
+
     } = props;
 
 
     return (
+
         <Form className={"container"} >
+            <h1>{coso}</h1>
 
             <TextField
                 name="titulo"
@@ -90,6 +92,16 @@ export default withFormik({
 
     handleSubmit(values, formikBag) {
         console.log(values);
+        console.log(formikBag);
+        const { newPost } = formikBag.props;
+
+        newPost({
+            userId: 1,
+            id: '',
+            title: values.titulo,
+            body: values.contenido
+        });
+
         formikBag.setSubmitting(false);
     }
 

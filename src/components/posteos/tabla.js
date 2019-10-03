@@ -1,7 +1,8 @@
 import React from 'react';
 import MaterialTable from 'material-table';
 
-export default function MaterialTableDemo({posts}) {
+export default function MaterialTableDemo({ posts, updatePost, deletePost }) {
+
   const [state, setState] = React.useState({
     columns: [
       { title: 'ID Post', field: 'id' },
@@ -9,25 +10,21 @@ export default function MaterialTableDemo({posts}) {
     ],
     data: posts
   });
-  
+
   return (
     <MaterialTable
-      title="Editable Example"
+      title="Editable "
       columns={state.columns}
       data={posts}
       editable={{
-     
+
         onRowUpdate: (newData, oldData) =>
           new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              const data = [...state.data];
-              data[data.indexOf(oldData)] = newData;
-              setState({ ...state, data });
-            }, 600);
+           console.log(resolve);
           }),
         onRowDelete: oldData =>
           new Promise(resolve => {
+           
             setTimeout(() => {
               resolve();
               const data = [...state.data];

@@ -4,7 +4,7 @@ import { temas } from '../../../data';
 
 const initialState = {
     temas: [],
-    tema: false,
+    tema: "",
     titulo:""
 };
 
